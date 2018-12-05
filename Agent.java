@@ -20,8 +20,8 @@ public class Groupn extends AbstractNegotiationParty {
 	private Bid lastReceivedBid = null;
 
 	@Override
-	public void init(AbstractUtilitySpace utilSpace, Deadline dl, negotiator.timeline.TimeLineInfo tl, long randomSeed,
-			AgentID agentId, PersistentDataContainer storage) {
+	public void init(AbstractUtilitySpace utilSpace, Deadline dl, negotiator.timeline.TimeLineInfo tl, long randomSeed,	AgentID agentId, PersistentDataContainer storage) 
+	{
 
 		super.init(utilSpace, dl, tl, randomSeed, agentId, storage);
 
@@ -30,7 +30,6 @@ public class Groupn extends AbstractNegotiationParty {
 
 		// if you need to initialize some variables, please initialize them
 		// below
-
 	}
 
 	/**
@@ -42,8 +41,9 @@ public class Groupn extends AbstractNegotiationParty {
 	 *            Either a list containing both accept and offer or only offer.
 	 * @return The chosen action.
 	 */
+	
 	@Override
-	public Action chooseAction(List<Class<? extends Action>> validActions) {
+	public Action chooseAction(List<Class<?extends Action>> validActions) {
 
 		// with 50% chance, counter offer
 		// if we are the first party, also offer.
